@@ -139,12 +139,8 @@ class LoraCommands:
                             w("[raw] " + frame.frame.hex())
                     except Exception as e:
                         w("[decode error] " + str(e))
-                try:
-                    import uasyncio
-                    uasyncio.sleep_ms(50)
-                except ImportError:
-                    import time
-                    time.sleep(0.05)
+                import time
+                time.sleep(0.05)
         finally:
             try:
                 capture_all_packets(False)
@@ -177,12 +173,8 @@ class LoraCommands:
                             self.badge.lora.get_rssi(),
                             self.badge.lora.get_snr(),
                         ))
-                try:
-                    import uasyncio
-                    uasyncio.sleep_ms(50)
-                except ImportError:
-                    import time
-                    time.sleep(0.05)
+                import time
+                time.sleep(0.05)
         finally:
             try:
                 capture_all_packets(False)

@@ -308,12 +308,18 @@ class MetaCommands:
             return
 
         w("Erasing config...")
-        try:
-            import os
-            os.remove("/data/config")
+        import os
+        erased_any = False
+        for path in ("/data/config", "/data/config.json"):
+            try:
+                os.remove(path)
+                erased_any = True
+            except OSError:
+                pass
+        if erased_any:
             w("Config erased.")
-        except Exception as e:
-            w("Error: " + str(e))
+        else:
+            w("No config file found.")
 
         w("Rebooting...")
         try:

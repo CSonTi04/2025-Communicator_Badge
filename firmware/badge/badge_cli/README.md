@@ -1,6 +1,6 @@
 # Badge CLI
 
-The Badge CLI is a robust, Flipper Zero-inspired command-line interface for the Hackaday Supercon 2025 Communicator Badge. It provides deep access to the badge's hardware, network stack, and internal state over a USB serial connection.
+The Badge CLI is a robust, Flipper Zero-inspired command-line interface for the Hackaday Europe 2026 Communicator Badge. It provides deep access to the badge's hardware, network stack, and internal state over a USB serial connection.
 
 ## Architecture
 
